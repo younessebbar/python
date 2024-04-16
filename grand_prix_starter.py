@@ -43,9 +43,12 @@ podium = drivers[:3]
 # 6. Esteban
 # 7. Pierre
 
-idx = 0
-while idx < len(drivers):
+# idx = 0
+# while idx < len(drivers):
+#     print(f"{idx + 1}. {drivers[idx]}")
+#     idx += 1
+
+for idx in range(len(drivers)):
     print(f"{idx + 1}. {drivers[idx]}")
-    idx += 1
 
 
