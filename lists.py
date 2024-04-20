@@ -27,9 +27,33 @@ nums.pop(1)
 tasks.remove("well")
 
 # popitems
-
-
 nums.clear() 
 print(nums)
 
-# nums is empty
+
+#  the sort method overrides the content of the list, it doesn't return anything
+list_nums = [1 -5, 5, 12, 10, 14, 4, 2, 3]
+list_nums.sort()
+
+# reverse the values of the list, like sort reverse overrides the content of the list and doesn't return anything
+list_nums.reverse()
+
+# Count return number of occurrences in the list, if not found returns 0
+langs = ["C", "Javascript", "Python", "C#"]
+langs.count("C")
+
+# Comparing list with ==  vs is keyword
+nums1 = [1, 2, 3]
+nums2 = nums1
+#  like javascript python work with references which they call id, nums1 and nums2 share the same reference
+#  so nums2 == nums1 is True and nums2 is nums1 also True
+
+nums3 = [1, 2, 3]
+# this one is tricky, nums1 == nums3 is True because == only verifies the values of the lists
+# nums3 is nums1 gives False, because they do not share the same reference
+# once you declare a list by this [], it automaticaly creates a new reference in memory
+import copy
+list = ["Apple","Banana", "Tomatoes"]
+list1 = list.copy()
+
+nested_list = ["Hello", 1, "Bro", "Sis", ["Are", "You", "Mad"]]
