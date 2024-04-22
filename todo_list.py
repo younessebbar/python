@@ -24,9 +24,9 @@ while True:
         break
     elif command == "h":
         print(help)
-    elif command.isdigit() and len(todos) < int(command):
+    elif command.isnumeric() and len(todos) < int(command):
         print("I don't know that todo number")
-    elif command.isdigit() and len(todos) >= int(command):
+    elif command.isnumeric() and len(todos) >= int(command):
         done_todo = todos.pop(int(command) - 1)
         completed.append(done_todo)
     else:
