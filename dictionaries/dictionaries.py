@@ -20,3 +20,12 @@ print(f"{product} is {price} MAD")
 # dict.popitem(), remove the most recently added key-value pair, it returns the item as a tuple
 # dict.clear(), deletes all items from dictionary. it returns none
 # we can also use del to remove items from dictionary, returns none
+
+instructor = {
+    "name": "Younes SEBBAR",
+    "has_cat": True,
+    "fav_language": "Python",
+    "is_hilarious": False,
+    "fav_sport": "Football",
+    "fav_color": "violet"
+    }
