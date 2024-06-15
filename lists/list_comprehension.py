@@ -27,6 +27,7 @@ with_vowels = "This is so much fun"
 
 # using LC for list intersection conditions
 [num for num in [1, 2, 3, 4] if num in [3, 4, 5, 7]]
+
 # returns numbers that exist on the two arrays
 
 # NB val[::-1] the quickest way to reverse a string in python
@@ -36,4 +37,13 @@ with_vowels = "This is so much fun"
 nested_list = [[1,2,3,4], [5,6,7,8], [9,10,11,12]]
 # print values in nested list using LC (list comprehension)
 
-[[print(val) for val in l] for l in nested_list]
+board = [[num for num in range(1, 4)] for val in range(1, 4)]
+print(board);
+print([["X" if num % 2 != 0 else "O" for num in range(1, 4)] for val in range(1, 4)])
+
+# swap values in lists, kind of similar to swapping indexes in JS
+list_names = ["Michael", "Jack"]
+print(list_names)
+list_names[0], list_names[1] = list_names[1], list_names[0]
+print(list_names)
+
