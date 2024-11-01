@@ -3,8 +3,10 @@
 from textblob import TextBlob
 import pyttsx3
 
+
+name = input("What is your name ? ")
 engine = pyttsx3.init()
-engine.say("Hello Employee Younes SEBBAR. we hope you had a great day of work. it's time to submit your employee wellness statement")
+engine.say(f"Hello Employee {name}. we hope you had a great day of work. it's time to submit your wellness statement")
 engine.runAndWait()
 
 # blob = TextBlob("I really hate you so much moron!")
@@ -13,8 +15,13 @@ print("Enter your employee wellness statement: ")
 statement = input("> ")
 blob = TextBlob(statement)
 while blob.sentiment.polarity < 0.5:
-    engine.say("Employee Younes. That was not a positive wellness statement. please try again and be more positive this time.  we know how much you love working here")
-    engine.runAndWait()
+    print(blob.sentiment.polarity)
+    if blob.sentiment.polarity < 0.2:
+         engine.say(f"{name}. That was a rude statement. please try again and be more positive this time.")
+         engine.runAndWait()
+    elif blob.sentiment.polarity > 0.2  and blob.sentiment.polarity < 0.5:
+         engine.say(f"{name}. Better than before.though try to be a little bit more positive.")
+         engine.runAndWait()
     print("╥﹏╥")
     print("More positive please: ")
     statement = input("> ")
@@ -22,5 +29,5 @@ while blob.sentiment.polarity < 0.5:
 
 print("(*^‿^*)")
 print("We appreciate you too!")
-engine.say("Employee Younes. Thank you for such a kind and positive statement, we here the ministry of work appreciate you too! Have a great day")
+engine.say(f"{name}. Thank you for such a kind and positive statement, Have a great day")
 engine.runAndWait()
